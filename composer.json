@@ -1,10 +1,10 @@
 {
-    "name": "jms/object-routing",
+    "name":        "werkint/object-routing",
     "description": "Library for generating routes based on objects.",
-    "license": "Apache2",
+    "license":     "Apache2",
 
     "require": {
-        "jms/metadata": "1.*",
+        "jms/metadata":            "1.*",
         "symfony/property-access": "~2.2"
     },
 
