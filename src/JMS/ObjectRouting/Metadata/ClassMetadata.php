@@ -19,10 +19,20 @@
 namespace JMS\ObjectRouting\Metadata;
 
 use Metadata\MergeableClassMetadata;
+use Metadata\MergeableInterface;
+
 
 class ClassMetadata extends MergeableClassMetadata
 {
-    public $routes = array();
+    public $routes = [];
+
+    public function merge(MergeableInterface $object)
+    {
+        parent::merge($object);
+
+        /** @var ClassMetadata $object */
+        $this->routes = array_merge($this->routes, $object->routes);
+    }
 
     public function addRoute($type, $name, array $params = array())
     {
