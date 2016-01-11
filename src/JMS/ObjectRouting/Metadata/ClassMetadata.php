@@ -24,6 +24,7 @@ use Metadata\MergeableInterface;
 
 class ClassMetadata extends MergeableClassMetadata
 {
+    const WERKINT_FORK = true;
     public $routes = [];
 
     public function merge(MergeableInterface $object)
